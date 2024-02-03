@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <Script src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js" strategy="beforeInteractive" />
       <h1>zizzamia.xyz</h1>
       <model-viewer
         src="https://cybermfers.sfo3.digitaloceanspaces.com/cybermfers/public/assets/glb/8292.glb"
