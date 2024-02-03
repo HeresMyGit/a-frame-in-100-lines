@@ -33,6 +33,15 @@ export default function Page() {
   return (
     <>
       <h1>zizzamia.xyz</h1>
+      <model-viewer
+        src="https://cybermfers.sfo3.digitaloceanspaces.com/cybermfers/public/assets/glb/8292.glb"
+        ios-src="https://cybermfers.sfo3.digitaloceanspaces.com/cybermfers/public/assets/usdz/8292.usdz"
+        alt="A 3D model"
+        ar
+        auto-rotate
+        camera-controls
+        style={{ width: '100%', height: '400px' }}>
+      </model-viewer>
     </>
   );
 }
