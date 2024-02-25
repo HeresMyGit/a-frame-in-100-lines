@@ -1,19 +1,30 @@
-import { getFrameMetadata } from '@coinbase/onchainkit';
+import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
-
-const NEXT_PUBLIC_URL = 'https://zizzamia.xyz';
+import { NEXT_PUBLIC_URL } from './config';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Click Me',
+      label: 'Story time!',
+    },
+    {
+      action: 'link',
+      label: 'Link to Google',
+      target: 'https://www.google.com',
+    },
+    {
+      label: 'Redirect to pictures',
+      action: 'post_redirect',
     },
   ],
-  image: `${NEXT_PUBLIC_URL}/park-1.png`,
+  image: {
+    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    aspectRatio: '1:1',
+  },
   input: {
     text: 'Tell me a boat story',
   },
-  post_url: `${NEXT_PUBLIC_URL}/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
